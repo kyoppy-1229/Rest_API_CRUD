@@ -23,13 +23,13 @@ async def write_data(user: User):
 
 @user.put("/{id}")
 async def update_data(id:int, user: User):
-    conn.execute(users.update(
+    conn.execute(users.update().values(
         name=user.name,
-        email=user.mail
+        mail=user.mail
     ).where(users.c.id == id))
     return conn.execute(users.select()).fetchall()
 
-@user.delete("/")
-async def delete_data():
+@user.delete("/{id}")
+async def delete_data(id: int):
     conn.execute(users.delete().where(users.c.id == id))
     return conn.execute(users.select()).fetchall()
