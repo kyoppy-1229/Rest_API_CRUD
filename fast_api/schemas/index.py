@@ -1,1 +1,5 @@
-from schemas.user import User
+from pydantic import BaseModel
+
+class User(BaseModel):
+    name: str
+    mail: str
