@@ -1,6 +1,6 @@
 from sqlalchemy import Table, Column
 from sqlalchemy.sql.sqltypes import Integer, String
-from db.db import meta
+from db import meta
 
 users = Table(
     'fast',meta,
