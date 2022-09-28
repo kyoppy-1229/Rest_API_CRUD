@@ -11,3 +11,5 @@
 ・ユーザーID（主キー、更新不可）
 ・ユーザー名
 ・メールアドレス
+
+# 細かな説明 => https://qiita.com/Kyoppy/private/dc8643b77437855ff0de
